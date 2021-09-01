@@ -8,6 +8,8 @@ import requests
 import csv, requests
 City.objects.all().delete()
 def returner():
+    """This function takes in the urls provided in the email, as well as the passwords and re-writes them in a usable format for django. This method can
+    be improved, and with more time I would look at simplifying this code."""
     user, password = ('python-demo', 'claw30_bumps')
 
     url_hotels = 'http://rachel.maykinmedia.nl/djangocase/hotel.csv'
@@ -39,4 +41,4 @@ def returner():
 returner()
     
 #This file takes in the requested csv files, and writes them as the Hotel and 
-#city objects defined in the methods section. These will be used to write
+#city objects defined in the methods section. These will be used to write the final website structure
