@@ -32,13 +32,14 @@ def returner():
             city.save()
             for a in hotel_list:
                 if str(a)[2:5] == city.CityName: #this is my attempt at fixing the doubling issue in the hotels in bangkok. I am unsure why the code isn't doing what its supposed to do - F.P. 
-                    if h not in hotel_list:
+                    if str(a)[14:] not in h:
                         b = city.hotel_set.create(HotelName=str(a)[15:-3])
                         hotel_dict[b] = city
-                        h.append(a)
+                        h.append(str(a)[14:])
                         city.save()
                     
             city.save()
+            #print(h)
     return hotel_dict, c
 returner()
     
