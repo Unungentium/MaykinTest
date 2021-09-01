@@ -1,0 +1,14 @@
+{% extends 'hotels/base.html' %}
+{% block title %}
+List
+{% endblock %}
+
+{% block content %}
+<h1> {{ls.CityName}}</h1>
+
+<u1>
+    {% for hotel in ls.hotel_set.all %}
+        <li>{{hotel.HotelName}}</li>
+    {% endfor %}
+</u1>
+{% endblock %}

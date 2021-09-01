@@ -1,0 +1,17 @@
+code structure:
+
+One view - takes in the request from the user by clicking on the respective city (athens ...) and then shows the associated hotels to that city
+
+
+Idea #1 for implementation:
+
+Import the CSV files as a list via http. Then, loop over the cities and assign each hotel to the city, upon the user's request.
+
+steps to achieve this:
+
+1) hello world the website
+2) write a function to import the csv files
+2.5) create the "city" and "hotel" objects to be added to the view
+3) create the correct view and urlpath for the hotel viewer
+4) make a sidebar with a home page, and the hotel finder.
+5) 
